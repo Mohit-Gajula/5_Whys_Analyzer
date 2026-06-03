@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-html_path = os.path.join(script_dir, "index.html")
+html_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates", "index.html")
 with open(html_path, "r", encoding="utf-8") as file:
     HTML = file.read()
 
